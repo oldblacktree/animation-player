@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Piskel</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class='header'>
+    <a href="#">
+      <img class="logo" src="img/logo.png" alt="logo">
+    </a>
+  </header>
+  <main class='main'>
+    <div class="tools-column">
+      <ul class="pen-size">
+        <li class="pen-size__item pen-size__item--size-1 pen-size__item--active"></li>
+        <li class="pen-size__item pen-size__item--size-2 "></li>
+        <li class="pen-size__item pen-size__item--size-3"></li>
+        <li class="pen-size__item pen-size__item--size-4"></li>
+      </ul>
+      <ul class="tools">
+        <li class="tools-item tools-item--pen tools-item--active "></li>
+        <li class="tools-item tools-item--mirror"></li>
+        <li class="tools-item tools-item--paint-bucket"></li>
+        <li class="tools-item tools-item--paint-bucket-all"></li>
+        <li class="tools-item tools-item--eraser"></li>
+        <li class="tools-item tools-item--stroke"></li>
+        <li class="tools-item tools-item--rectangle"></li>
+        <li class="tools-item tools-item--circle"></li>
+        <li class="tools-item tools-item--move"></li>
+        <li class="tools-item tools-item--shape-selection"></li>
+        <li class="tools-item tools-item--rectangle-selection"></li>
+        <li class="tools-item tools-item--lasso-selection"></li>
+        <li class="tools-item tools-item--lighten"></li>
+        <li class="tools-item tools-item--dithering"></li>
+        <li class="tools-item tools-item--color-picker"></li>
+      </ul>
+      <div class="palette">
+        <input class="palette__primary" id="palette__primary" type="color">
+        <input class="palette__secondary" id="palette__secondary" type="color">
+        <label for='palette__primary'>
+          <div class="palette__item palette__item--primary"></div>
+        </label>
+        <label for="palette__secondary">
+          <div class="palette__item palette__item--secondary"></div>
+        </label>
+        <div id="swap-color" class="palette__swap-color"></div>
+      </div>
+
+    </div>
+    <div class="frames-column">
+      <ul id="frames" class="frames">
+      </ul>
+      <div id="add-frame" class="add-frame">
+        <p class="add-frame__text">Add new frame</p>
+      </div>
+    </div>
+    <div class="main-column">
+      <canvas id="main-canvas" class='main-canvas' width="800px" height="800px">
+        Your browser doesn't supportcanvas
+      </canvas>
+    </div>
+    <div id="settings-column" class="settings-column">
+      <div class="animation-player" id="animation-player">
+        <!-- <div class="animation-player__button animation-player__button--popup"></div> -->
+        <canvas id="animation-player__canvas" class="animation-player__canvas" width="800px" height="800px"></canvas>
+      </div>
+      <div class="fps">
+        <p class="fps__display" id="fps__display">0 FPS</p>
+        <input class="fps__range" id="fps__range" type="range" min="0" max="24" value='0'></input>
+      </div>
+      <p id='cursor-position' class='cursor-position'>[31 x 31]</p>
+    </div>
+    <ul class="menu">
+      <li class="menu__item menu__item--preference"></li>
+      <li class="menu__item menu__item--resize"></li>
+      <li class="menu__item menu__item--save"></li>
+      <li class="menu__item menu__item--export"></li>
+      <li class="menu__item menu__item--import"></li>
+      </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
