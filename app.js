@@ -1,3 +1,4 @@
+(function(){
 const canvas = document.getElementById("main-canvas");
 const ctx = canvas.getContext('2d');
 const animationPlayerCanvas = document.getElementById("animation-player__canvas");
@@ -240,15 +241,15 @@ fpsInput.addEventListener("change", event => {
 
 //--------popup------
 const animationPlayer = document.getElementById("animation-player");
+
 const popup = document.createElement("div");
 popup.classList.add("animation-player__button", "animation-player__button--popup");
 popup.addEventListener("click", () => {
-  canvas.requestFullscreen();
-
+//   canvas.requestFullscreen();
+    animationPlayerCanvas.requestFullscreen();
 });
-console.log(animationPlayer)
 animationPlayer.appendChild(popup);
-
+})()
 
 
 
